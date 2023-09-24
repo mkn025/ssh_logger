@@ -1,5 +1,5 @@
 import re
-
+import datetime
 def hent_linjer(filename,n,start=False):
     with open(filename, "r") as file:
         lines = file.readlines()
@@ -19,3 +19,9 @@ def find_ip_addresses(input_string):
     return ip_addresses
 
 
+def dato_og_tid():
+    now = datetime.datetime.now()
+    formatted_time = now.strftime("%m/%d/%Y %I:%M %p")
+    return formatted_time
+
+    

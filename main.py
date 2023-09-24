@@ -19,7 +19,8 @@ while True:
         for n in logg:
             append_to_file("logg/logg.txt",n)
             ip_adresse = find_ip_addresses(n)
-            append_to_file("logg/logg_ip.txt",f"ip adresse: {ip_adresse[0]}") if len(ip_adresse) > 0 else None
+            append_to_file("logg/logg_ip.txt",f"ip adresse: {ip_adresse[0]} <==> {print(dato_og_tid())}") if len(ip_adresse) > 0 else None
+            
     logg_tester = logg
     time.sleep(updates)
 
