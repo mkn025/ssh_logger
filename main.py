@@ -8,7 +8,9 @@ while True:
         updates = int(hent_linjer("conf/etc.conf",1,True))
         amount_of_lines = int(hent_linjer("conf/etc.conf",3,True))
         print(f"program updates every {updates} sek og writes lines {amount_of_lines} to file")
+        print(f"start time {dato_og_tid()}")
     except:
+        print(f"start time {dato_og_tid()}")
         updates = 5
         amount_of_lines = 1
         print("etc.conf was not found")
@@ -19,7 +21,7 @@ while True:
         for n in logg:
             append_to_file("logg/logg.txt",n)
             ip_adresse = find_ip_addresses(n)
-            append_to_file("logg/logg_ip.txt",f"ip adresse: {ip_adresse[0]} <==> {print(dato_og_tid())}") if len(ip_adresse) > 0 else None
+            append_to_file("logg/logg_ip.txt",f"ip adresse: {ip_adresse[0]} <==> {dato_og_tid()}") if len(ip_adresse) > 0 else None
             
     logg_tester = logg
     time.sleep(updates)
