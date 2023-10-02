@@ -7,8 +7,8 @@ while True:
     try:
         updates = int(hent_linjer("conf/etc.conf",1,True))
         amount_of_lines = int(hent_linjer("conf/etc.conf",3,True))
-        print(f"program updates every {updates} sek og writes lines {amount_of_lines} to file")
         print(f"start time {dato_og_tid()}") and append_to_file("logg/logg.txt", dato_og_tid()) if antall_ganger_kjørt == 0 else None
+        print(f"program updates every {updates} sek og writes lines {amount_of_lines} to file")
     except:
         print(f"start time {dato_og_tid()}") and append_to_file("logg/logg.txt", dato_og_tid()) if antall_ganger_kjørt == 0 else None
         updates = 5
