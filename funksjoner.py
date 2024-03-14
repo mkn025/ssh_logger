@@ -1,4 +1,5 @@
 import re
+import requests
 import datetime
 def hent_linjer(filename,n,start=False):
     with open(filename, "r") as file:
@@ -24,4 +25,13 @@ def dato_og_tid():
     formatted_time = now.strftime("%m/%d/%Y %I:%M %p")
     return formatted_time
 
-    
+
+
+def get_ip_info_location(ip_address):
+    adress = f"https://api.iplocation.net/?cmd=ip-country&ip={ip_address}"
+    r = requests.get(adress)
+    return r.json()["country_name"]  
+
+
+
+
