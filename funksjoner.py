@@ -1,6 +1,14 @@
 import re
 import requests
 import datetime
+from json import load
+
+def load_json_file(file):
+    with open(file, "r") as file:
+        return load(file)
+
+
+
 def hent_linjer(filename,n,start=False):
     with open(filename, "r") as file:
         lines = file.readlines()
