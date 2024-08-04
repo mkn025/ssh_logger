@@ -5,7 +5,7 @@ import time
 
 # 
 config_file = load_json_file("conf/conf.json")
-output_file = config_file["output_file"] if "output_file" in config_file else "logg.txt" 
+output_file = config_file["output_file"] if len(config_file["output_file"]) > 0 else "logg.txt" 
 
 logg_tester = None
 antall_ganger_kjørt = 0 

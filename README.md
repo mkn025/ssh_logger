@@ -3,8 +3,7 @@ Log of all ssh conections
 
 # Info 
 it works by reading lines form /var/log/auth.log outputs it in a nice format,
-and prints the date and the location of the ip adress.
-
+and prints the date and the location of the ip adress. support for mac os and windows are comming
 
 
 install and run
