@@ -26,9 +26,9 @@ while True:
         pass
     else:
         for n in logg:
-            append_to_file(f"{output_file}_ip",n)
+            append_to_file(f"{output_file}",n)
             ip_adresse = find_ip_addresses(n)
-            append_to_file(f"{output_file}_ip",f"ip adresse: {ip_adresse[0]} <==> {dato_og_tid()} Location <==> {get_ip_info_location(ip_adresse[0])}") if len(ip_adresse) > 0 else None
+            append_to_file(f"ip_{output_file}",f"ip adresse: {ip_adresse[0]} <==> {dato_og_tid()} Location <==> {get_ip_info_location(ip_adresse[0])}") if len(ip_adresse) > 0 else None
         antall_ganger_kjørt += 1
             
             
