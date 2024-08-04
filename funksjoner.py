@@ -2,11 +2,17 @@ import re
 import requests
 import datetime
 from json import load
+from os import system, path
+
 
 def load_json_file(file):
     with open(file, "r") as file:
         return load(file)
+    
 
+def append_to_file(filename, text):
+    with open(filename, 'a') as file:
+        file.write(text)
 
 
 def hent_linjer(filename,n,start=False):
@@ -17,9 +23,6 @@ def hent_linjer(filename,n,start=False):
         else:
             return(lines[-n:])
 
-def append_to_file(filename, text):
-    with open(filename, "a") as file:
-        file.write(text + "\n")
 
 
 def find_ip_addresses(input_string):
@@ -38,8 +41,7 @@ def dato_og_tid():
 def get_ip_info_location(ip_address):
     adress = f"https://api.iplocation.net/?cmd=ip-country&ip={ip_address}"
     r = requests.get(adress)
-    return r.json()["country_name"]  
-
+    return r.json()["country_name"]
 
 
 

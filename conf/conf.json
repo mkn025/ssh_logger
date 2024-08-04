@@ -1,5 +1,6 @@
 
 {
     "update":"5",
-    "linjer":"3"
+    "linjer":"3",
+    "output_file":"output_file.txt"
 }

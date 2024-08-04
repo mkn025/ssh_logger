@@ -2,12 +2,13 @@ from funksjoner import *
 import time
 
 
-
+# 
 config_file = load_json_file("conf/conf.json")
-
+output_file = config_file["output_file"] if "output_file" in config_file else "logg/logg.txt"
 
 logg_tester = None
 antall_ganger_kjørt = 0 
+
 while True:
     try:
         updates = int(config_file['update'])
