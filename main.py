@@ -2,11 +2,9 @@ from funksjoner import *
 import time
 
 
-
-# 
+# variables
 config_file = load_json_file("conf/conf.json")
-output_file = config_file["output_file"] if len(config_file["output_file"]) > 0 else "logg.txt" 
-
+output_file = config_file["output_file"] if len(config_file["output_file"]) > 0 else "logg.txt"
 logg_tester = None
 antall_ganger_kjørt = 0 
 
@@ -30,8 +28,7 @@ while True:
             ip_adresse = find_ip_addresses(n)
             append_to_file(f"ip_{output_file}",f"ip adresse: {ip_adresse[0]} <==> {dato_og_tid()} Location <==> {get_ip_info_location(ip_adresse[0])}") if len(ip_adresse) > 0 else None
         antall_ganger_kjørt += 1
-            
-            
+     
     logg_tester = logg 
     time.sleep(updates)
 
