@@ -1,9 +1,13 @@
 # ssh_logger
-Log of all ssh conections 
+Log of all ssh conections.
 
 # Info 
 it works by reading lines form /var/log/auth.log outputs it in a nice format,
-and prints the date and the location of the ip adress. support for mac os and windows are comming
+and prints the date and the location of the ip adress. If output_file in conf.json is empty then the logg is outputed to --> logg.txt
+
+Support for mac os and windows are comming
+
+
 
 
 install and run
