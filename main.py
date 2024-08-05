@@ -5,6 +5,9 @@ import time
 # variables
 config_file = load_json_file("conf/conf.json")
 output_file = config_file["output_file"] if len(config_file["output_file"]) > 0 else "logg.txt"
+path_to_ssh_log = config_file["path_to_ssh_log"] if len(config_file["path_to_ssh_log"]) > 0 else "/var/log/auth.log"
+
+
 logg_tester = None
 antall_ganger_kjørt = 0 
 
@@ -19,7 +22,7 @@ while True:
         updates = 5
         amount_of_lines = 1
         print("conf.json was not found")
-    logg = hent_linjer("/var/log/auth.log", amount_of_lines)
+    logg = hent_linjer(path_to_ssh_log, amount_of_lines)
     if logg == logg_tester:
         pass
     else:

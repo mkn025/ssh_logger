@@ -2,5 +2,6 @@
 {
     "update":"5",
     "linjer":"3",
-    "output_file":"" 
+    "output_file":"",
+    "path_to_ssh_log":""
 }
